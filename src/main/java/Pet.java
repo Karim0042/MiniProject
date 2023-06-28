@@ -9,7 +9,21 @@ public class Pet {
         public int trickLevel;
         public String[] habits;
 
-        public void eat(){
+        public Pet(){}
+
+        public Pet(String nickName){
+            this.nickName=nickName;
+        }
+
+    public Pet(String species, String nickName, int age, int trickLevel, String[] habits) {
+        this.species = species;
+        this.nickName = nickName;
+        this.age = age;
+        this.trickLevel = trickLevel;
+        this.habits = habits;
+    }
+
+    public void eat(){
             System.out.println("I am eating");
         }
 

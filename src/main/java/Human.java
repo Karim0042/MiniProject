@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Human {
     public String name;
@@ -12,8 +13,15 @@ public class Human {
     public Human father;
 
     public String[][] schedule;
-    public Human(){
 
+    public Human() {
+
+    }
+
+    public Human(String name, String surname, int year) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
     }
 
     public Human(String name, String surname, int year, int iq, Pet pet, Human mother, Human father, String[][] schedule) {
@@ -28,21 +36,42 @@ public class Human {
     }
 
 
-    public void greetPet(){
+    public void greetPet() {
 
-        System.out.println("Hello"+pet.nickName);
+        System.out.println("Hello" + pet.nickName);
     }
-    public void describePet(){
 
-        System.out.print("Info about Pet "+":"+"I have a"+pet.species+",he is "+pet.age+"years old ,he is");
+    public void describePet() {
 
-        if(pet.trickLevel>=50){
+        System.out.print("Info about Pet " + ":" + "I have a" + pet.species + ",he is " + pet.age + "years old ,he is");
+
+        if (pet.trickLevel >= 50) {
             System.out.print(" very sly");
-        }else {
+        } else {
             System.out.println(" almost not sly.");
         }
 
 
+    }
+
+    public boolean feedPet(boolean b) {
+        if (!b) {
+            Random random = new Random();
+
+            int randomNumber = random.nextInt(101);
+
+            if (this.pet.trickLevel > randomNumber) {
+                feedPet(true);
+                return true;
+            }
+
+            System.out.printf("I think %s is not hungry\n", this.name);
+
+            return false;
+        }
+
+        System.out.printf("Hm... I will feed %s's %s\n", this.name, this.pet.nickName);
+        return true;
     }
 
     @Override
