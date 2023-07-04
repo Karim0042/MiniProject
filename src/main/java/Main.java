@@ -1,8 +1,13 @@
 public class Main {
     public static void main(String[] args) {
+
         Human h = new Human();
         h.name="Eric";
         h.surname = "Wick";
+
+        h.mother = new Human();
+        h.father = new Human();
+
         h.father.name= "John";
         h.mother.name="Jane";
         h.pet = new Pet();
@@ -13,9 +18,5 @@ public class Main {
         System.out.println(h.mother.toString());
         System.out.println(h.father.toString());
         System.out.println(h.pet.toString());
-
-
-
-
     }
 }

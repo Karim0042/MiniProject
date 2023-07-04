@@ -28,7 +28,6 @@ public class Pet {
         }
 
         public void respond(){
-
             System.out.println("Helo owner. I am -"+this.nickName+"."+" I miss you!");
         }
 
@@ -38,6 +37,7 @@ public class Pet {
 
         @Override
         public String toString() {
+
             return "Pet{" +
                     "species='" + species + '\'' +
                     ", nickName='" + nickName + '\'' +
@@ -45,6 +45,7 @@ public class Pet {
                     ", trickLevel=" + trickLevel +
                     ", habits=" + Arrays.toString(habits) +
                     '}';
+
         }
     }
 

@@ -6,11 +6,10 @@ public class Human {
     public String surname;
     public int year;
     public int iq;
-
     public Pet pet;
-    public Human mother;
 
-    public Human father;
+    public Human mother ;
+    public Human father ;
 
     public String[][] schedule;
 
@@ -35,9 +34,7 @@ public class Human {
         this.schedule = schedule;
     }
 
-
     public void greetPet() {
-
         System.out.println("Hello" + pet.nickName);
     }
 
@@ -76,6 +73,20 @@ public class Human {
 
     @Override
     public String toString() {
+
+        if(mother==null || father==null){
+            return "Human{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", year=" + year +
+                    ", iq=" + iq +
+                    ", pet=" + pet +
+                    ", mother=" +null+
+                    ", father=" +null+
+                    ", schedule=" + Arrays.toString(schedule) +
+                    '}';
+        }
+
         return "Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
