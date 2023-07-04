@@ -14,6 +14,7 @@ public class Main {
         h.pet.nickName="Hac";
         h.pet.trickLevel =56;
 
+
         System.out.println(h.toString());
         System.out.println(h.mother.toString());
         System.out.println(h.father.toString());
