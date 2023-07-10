@@ -1,8 +1,2 @@
-Pet.java
- Pet
-Human.java
- Human
 Main.java
  Main
-Exercises/LeapYear.java
- Exercises.LeapYear
